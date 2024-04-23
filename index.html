@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <h1>Iniciar Sesion</h1>
+    <form action="" id="form-container">
+        <input type="email" id="user-email" placeholder="Correo" required>
+        <input type="password" id="user-password" placeholder="Contraseña" required>
+        <button type="button" class="button" id="login-btn">Iniciar Sesion</button>
+        <a href="./templates/signup.html">No tienes Cuenta?</a>
+        <button type="button" class="button" id="google-login-btn">Iniciar Sesion con Google</button>
+        <button type="button" class="button" id="facebook-login-btn">Iniciar Sesion con Facebook</button>
+        <a href="./templates/forgot-password.html">Olvidaste Contraseña</a>
+    </form>
+    
+
+    <script type="module" src="./controllers/login.js"></script>
+</body>
+</html>
