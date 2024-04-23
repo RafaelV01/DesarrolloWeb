@@ -27,13 +27,32 @@ async function loginWithInputs() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+
+
+
+/* document.addEventListener("DOMContentLoaded", () => {
   loginBtn.addEventListener("click", loginWithInputs);
   loginGoogleBtn.addEventListener("click", () => {
     signInPopup(googleProvider);
-    window.location.href = "./templates/home.html" 
+    window.location.href = "../templates/home.html" 
   });
   loginFacebookBtn.addEventListener("click", () =>
     signInPopup(facebookProvider)
   );
+});  */
+
+loginGoogleBtn.addEventListener("click", () => {
+  signInPopup(googleProvider).then(() => {
+    window.location.href = "../templates/home.html";
+  }).catch(error => {
+    console.error("Error during Google sign-in:", error);
+  });
+});
+
+loginFacebookBtn.addEventListener("click", () => {
+  signInPopup(facebookProvider).then(() => {
+    window.location.href = "../templates/home.html";
+  }).catch(error => {
+    console.error("Error durante el inicio de sesión con Facebook:", error);
+  });
 });
